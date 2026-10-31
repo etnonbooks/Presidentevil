@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>President of Evil - Home</title>
+
+    
+
+    <!-- Bootstrap 5 CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+    <!-- Font Awesome para os ícones -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+
+    <!-- Google Fonts: Oswald (Títulos) e Inter (Textos) -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        :root {
+
+            --cor-vermelho-vakinha: #ff4d4d;
+
+            --cor-dourado-cta: #d3a268;
+
+            --cor-botao: #f5a623;
+
+            --cor-botao-hover: #d48a1a;
+
+            --cor-texto-cinza: #a0a0a0;
+
+        }
+
+
+
+        body, html {
+
+            height: 100%;
+
+            margin: 0;
+
+            font-family: 'Inter', sans-serif;
+
+            background-color: #000;
+
+            color: #fff;
+
+        }
+
+
+
+        /* BACKGROUND PRINCIPAL (DESKTOP)
+
+         * Proporção recomendada: 16:9 (ex: 1920x1080px)
+
+         */
+
+        .hero-section {
+
+            background: url('https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=1920&auto=format&fit=crop') no-repeat center center;
+
+            background-size: cover;
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+
+        /* Overlay escuro para leitura do texto */
+
+        .hero-overlay {
+
+            position: absolute;
+
+            top: 0; left: 0; right: 0; bottom: 0;
+
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.9) 100%);
+
+            z-index: 1;
+
+        }
+
+
+
+        .content-wrapper {
+
+            position: relative;
+
+            z-index: 2;
+
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+
+        /* Navbar */
+
+        .navbar {
+
+            padding: 1.5rem 2rem;
+
+            background: transparent !important;
+
+        }
+
+
+
+        .navbar-brand {
+
+            font-family: 'Oswald', sans-serif;
+
+            font-weight: 700;
+
+            font-size: 1.8rem;
+
+            letter-spacing: 1px;
+
+            color: #fff !important;
+
+        }
+
+
+
+        .nav-link {
+
+            font-family: 'Oswald', sans-serif;
+
+            color: #fff !important;
+
+            text-transform: uppercase;
+
+            font-size: 0.95rem;
+
+            letter-spacing: 1px;
+
+            margin: 0 10px;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .nav-link:hover {
+
+            color: #ccc !important;
+
+        }
+
+
+
+        .link-vakinha {
+
+            color: var(--cor-vermelho-vakinha) !important;
+
+            font-weight: 600;
+
+        }
+
+
+
+        .social-icons a {
+
+            color: #fff;
+
+            font-size: 1.2rem;
+
+            margin-left: 15px;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .social-icons a:hover {
+
+            color: #ccc;
+
+        }
+
+
+
+        /* Área do Conteúdo Principal */
+
+        .main-content {
+
+            margin-top: auto;
+
+            padding-bottom: 3rem;
+
+        }
+
+
+
+        .huge-title {
+
+            font-family: 'Oswald', sans-serif;
+
+            font-weight: 700;
+
+            font-size: 6rem;
+
+            line-height: 0.9;
+
+            text-transform: uppercase;
+
+            margin-bottom: 2rem;
+
+            letter-spacing: -2px;
+
+        }
+
+
+
+        .subtitle {
+
+            font-weight: 700;
+
+            font-size: 3rem;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+
+
+        .body-text {
+
+            font-size: 1.1rem;
+
+            line-height: 1.6;
+
+            max-width: 600px;
+
+            margin-bottom: 2rem;
+
+            color: #e0e0e0;
+
+        }
+
+
+
+        .cta-text {
+
+            color: var(--cor-dourado-cta);
+
+            font-size: 1.3rem;
+
+            font-weight: 600;
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .subtext {
+
+            color: var(--cor-texto-cinza);
+
+            font-size: 1rem;
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        .btn-doar {
+
+            background-color: var(--cor-botao);
+
+            color: #fff;
+
+            font-family: 'Oswald', sans-serif;
+
+            font-size: 1.2rem;
+
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+            padding: 12px 40px;
+
+            border: none;
+
+            border-radius: 4px;
+
+            transition: background-color 0.3s;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+            text-decoration: none;
+
+            display: inline-block;
+
+        }
+
+
+
+        .btn-doar:hover {
+
+            background-color: var(--cor-botao-hover);
+
+            color: #fff;
+
+        }
+
+
+
+        /* Responsividade (Mobile) */
+
+        @media (max-width: 991px) {
+
+            /* BACKGROUND MOBILE (Proporção: 9:16 - ex: 1080x1920px) */
+
+            .hero-section {
+
+                background-position: center; 
+
+            }
+
+
+
+            .navbar {
+
+                padding: 1rem;
+
+            }
+
+
+
+            .huge-title {
+
+                font-size: 4rem;
+
+                text-align: center;
+
+                margin-top: 2rem;
+
+            }
+
+
+
+            .subtitle {
+
+                font-size: 2.2rem;
+
+                text-align: center;
+
+            }
+
+
+
+            .body-text {
+
+                text-align: center;
+
+                margin: 0 auto 1.5rem auto;
+
+            }
+
+
+
+            .cta-text, .subtext {
+
+                text-align: center;
+
+            }
+
+
+
+            .btn-doar-container {
+
+                display: flex;
+
+                justify-content: center;
+
+                margin-top: 2rem;
+
+                width: 100%;
+
+            }
+
+            
+
+            .btn-doar {
+
+                width: auto;
+
+                min-width: 220px;
+
+                padding: 12px 25px;
+
+                font-size: 1.1rem;
+
+                text-align: center;
+
+            }
+
+
+
+            .social-icons {
+
+                margin-top: 1rem;
+
+                justify-content: center;
+
+                display: flex;
+
+            }
+
+            
+
+            .navbar-collapse {
+
+                background: rgba(0,0,0,0.95);
+
+                padding: 1rem;
+
+                border-radius: 8px;
+
+                margin-top: 10px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- SEÇÃO HERO PRINCIPAL -->
+
+    <section class="hero-section">
+
+        <div class="hero-overlay"></div>
+
+        
+
+        <div class="content-wrapper container-fluid px-lg-5">
+
+            <!-- Navbar -->
+
+            <nav class="navbar navbar-expand-lg">
+
+                <div class="container-fluid p-0">
+
+                    <a class="navbar-brand" href="index.html">PRESIDENT OF EVIL</a>
+
+                    
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="#">Jogar Demo</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+
+                            <li class="nav-item"><a class="nav-link link-vakinha" href="vakinha.html">Vakinha</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="desenvolvedor.html">Desenvolvedor</a></li>
+
+                        </ul>
+
+                        <div class="social-icons">
+
+                            <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+
+                            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+
+
+            <!-- Título Gigante -->
+
+            <div class="row flex-grow-1">
+
+                <div class="col-12 d-flex flex-column justify-content-center">
+
+                    <h1 class="huge-title d-none d-lg-block">PRESIDENT<br>OF EVIL</h1>
+
+                    <h1 class="huge-title d-lg-none mt-5">PRESIDENT<br>OF EVIL</h1>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Conteúdo Inferior -->
+
+            <div class="main-content row align-items-end">
+
+                <div class="col-lg-8">
+
+                    <h2 class="subtitle">Você é a última esperança.</h2>
+
+                    <p class="body-text">
+
+                        A capital foi contaminada. Uma bomba nuclear irá reduzir a cidade a cinzas. Adentre a área contaminada e salve a garota antes que a bomba caia, use todos os meios necessários para eliminar os vermes no caminho da missão.
+
+                    </p>
+
+                    <p class="cta-text">Ajude o projeto! Doe via pix ou cripto e jogue a Alpha Demo</p>
+
+                    <p class="subtext">Em breve para PC, torradeiras e celulares</p>
+
+                </div>
+
+                
+
+                <div class="col-lg-4 btn-doar-container d-flex justify-content-lg-end align-items-end">
+
+                    <a href="vakinha.html" class="btn btn-doar">Doar Agora</a>
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Bootstrap 5 JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
